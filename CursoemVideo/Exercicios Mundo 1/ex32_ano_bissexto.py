@@ -5,7 +5,7 @@
 a = int(input('Digite um ano: '))
 
 if a <= 1582:
-    print('O conceito de ano bissexto ainda não tinha sido aplicado nesse ano.')
+    print('O conceito de ano bissexto ainda não tinha sido aplicado no ano {}.'.format(a))
 else:
     if a % 400 == 0 and a % 100 == 0:
         print('É ano bissexto!')
@@ -18,9 +18,16 @@ else:
             else:
                 print('Não é ano bissexto!')
 
-# Outro jeito:
+# Exemplo do professor:
+
 print('\nOutro jeito de responder:')
-if (a % 4 == 0 and a % 100 != 0) or a % 400 == 0:
-    print('É ano bissexto!')
+
+from datetime import date
+
+ano = int(input('Digite o ano que deseja analisar ou 0 para analisar o ano atual: '))
+if ano == 0:
+    ano = date.today().year
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print('{} É ano bissexto!'.format(ano))
 else:
-    print('Não é ano bissexto!')
+    print('{} Não é ano bissexto!'.format(ano))
