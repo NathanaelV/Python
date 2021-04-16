@@ -20,3 +20,5 @@ if s == 0:
     print('A frase é um Palindromo.')
 else:
     print('A frase não é um Palindromo')
+
+# Exemplo do professor

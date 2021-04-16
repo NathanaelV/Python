@@ -8,3 +8,5 @@ print('-' * 15)
 for a in range(1, m+1):
     print('{} X {:>2} = {}'.format(t, a, a * t))
 print('-' * 15)
+
+# Exemplo do professor: Semelhante
