@@ -4,6 +4,6 @@
 print('Montando uma P.A. de números inteiros:')
 t = int(input('Digite o 1º termo: '))
 r = int(input('Digete a razão da PA: '))
-for a in range(t, t+10*r, r):
+for a in range(t, t + 10*r, r):
     print(a)
 print('Fim')
