@@ -9,9 +9,11 @@ print('{:=^40}'.format(' LOJAS GUANABARAS '))
 print('Hora de efetuar o pagamento')
 print('-' * 48)
 price = float(input('Qual o valor total da compra? '))
-print('Qual será a forma de pagamento?\n1 - Dinheiro/cheque à vista. Desconto de 10%\n'
-      '2 - Cartão de débito à vista. Desconto de 5%'
-      '\n3 - Cartão de Crédito até 2x.\n4 - 3x ou mais no Cartão de Crédito. 20% de Juros')
+print('''Qual será a forma de pagamento?
+    [ 1 ] - Dinheiro/cheque à vista. Desconto de 10%
+    [ 2 ] - Cartão de débito à vista. Desconto de 5%
+    [ 3 ] - Cartão de Crédito até 2x
+    [ 4 ] - 3x ou mais no Cartão de Crédito. 20% de Juros''')
 option = int(input('Digite uma opção de 1 a 4... '))
 
 if option == 1:
