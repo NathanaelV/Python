@@ -23,10 +23,12 @@ p = int(input('Passo: '))
 for a in range(i, f, p):
     print(a)
 print('Fim')
+
 print('\nRepetindo uma entrada de valores: ')
 for a in range(1, 4):
     n = int(input('Digite um valor: '))
 print('Fim')
+
 print('\nSomando números')
 s = 0
 for c in range(1, 3):
