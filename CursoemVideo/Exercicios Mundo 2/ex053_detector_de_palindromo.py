@@ -6,3 +6,4 @@
 # Ex.: Apos a sopa; a sacada da casa; a torre da derrota; o lobo ama o bolo;
 # Anotaram a data da maratona.
 # Desconsiderar os espaços e acentos. Programa tira os espaços
+print('Descobrindo se a frase é um Palindromo.')
