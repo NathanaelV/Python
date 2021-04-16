@@ -18,7 +18,7 @@ prestação = casa / (tempo * 12)
 
 if prestação >= 0.3 * salário:
     print('\nPedido de emrprestimo {}NEGADO!{}'.format(cores['vermelho'], cores['limpa']))
-    print('A prestação não deve ser maior que 30% do seu saláro.')
+    print('A prestação foi de R$ {:.2f} e não deveria ser maior que 30% do seu saláro.'.format(prestação))
     aprovado = round(casa / (0.3 * salário) // 12 + 0.5)
     prestação = casa / (aprovado * 12)
     print('Você deve pagar a casa em {}{} anos{}, para o pedido de emprestimo ser aceito'
@@ -30,3 +30,4 @@ else:
           .format(cores['negrito'], prestação, cores['limpa']))
 
 # Exemplo do professor:
+# Exemplo semelhante
