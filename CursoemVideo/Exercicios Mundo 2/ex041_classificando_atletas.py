@@ -26,3 +26,19 @@ elif idade <= 20:
     print('{} está na categoria Sênior, pois {} tem {} anos'.format(sexo, sexo.lower(), idade))
 else:
     print('{} está na categoria Master, pois {} tem {} anos'.format(sexo, sexo.lower(), idade))
+
+# Exemplo do professor
+print('\nExemplo do professor:')
+
+print('O atleta tem {} anos.'.format(idade))
+
+if idade <= 9:
+    print('CATEGORIA: Mirim')
+elif idade <= 14:
+    print('CATEGORIA: Infantil')
+elif idade <= 19:
+    print('CATEGORIA: Junior')
+elif idade <= 20:
+    print('CATEGORIA: Senior')
+else:
+    print('CATEGORIA: Master')
