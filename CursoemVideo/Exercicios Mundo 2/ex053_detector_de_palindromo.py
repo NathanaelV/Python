@@ -22,3 +22,19 @@ else:
     print('A frase não é um Palindromo')
 
 # Exemplo do professor
+print('\nExemplo do professor: ')
+palavras = frase.split()
+inverso = ''
+for letra in range(len(junto)-1, -1, -1):
+    inverso += junto[letra]
+print('O inverso de {} é {}.'.format(junto, inverso))
+if inverso == junto:
+    print('Temos um Palindromo')
+else:
+    print('Não temos um Palindromo')
+
+# 3ª Alternativa como o Python
+inverso2 = junto[::-1]
+# Frase junto, do começo ao fim, porém de traz para frente
+# Por isso o -1
+print(inverso2)
