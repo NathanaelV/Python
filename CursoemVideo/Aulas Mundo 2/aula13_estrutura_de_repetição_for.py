@@ -1,4 +1,5 @@
 # Challenge 46 - 56
+# Funciona bem quando sei até onde eu quero ir.
 
 for a in range(0, 6):  # Repetirá 5 vezes. Conta o 1 mas não conta o 6
     print('Hello')     # Ele para no 6
