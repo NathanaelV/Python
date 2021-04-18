@@ -18,7 +18,7 @@ n = int(input('Digite o número: '))
 nf = n
 f = 1
 while f != n:
-    nf = nf * f
+    nf *= f
     f += 1
 print('{}! = {}'.format(n, nf))
 
@@ -28,5 +28,5 @@ print('\nUsando o For')
 nfor = int(input('Digite um número: '))
 nfor2 = nfor
 for c in range(1, nfor):
-    nfor2 = nfor2 * c
+    nfor2 *= c
 print('{}! = {}'.format(nfor, nfor2))
