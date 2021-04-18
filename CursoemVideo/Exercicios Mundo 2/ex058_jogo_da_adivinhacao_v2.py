@@ -16,8 +16,12 @@ while n != comp:
     i += 1
     sleep(0.5)
     if n != comp:
-        print('Não. Tente de novo!')
-        sleep(0.5)
+        if n < comp:
+            print('Não. Muito baixo!')
+            sleep(0.5)
+        else:
+            print('Não. Muito alto!')
+            sleep(0.5)
 print('Parabén você acertou!!!')
 sleep(0.5)
 print('Levou apenas {} tentativa(s).'.format(i))
