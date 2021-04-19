@@ -10,3 +10,16 @@ while i < 10:
     primeiro += razao
     i += 1
 print('Fim!')
+
+# Exemplo do Professor:
+
+print('\nExemplo do Professor:')
+# Usar a razão do Exercício anterior.
+primeiro = int(input('Digite o primeiro termo: '))
+termo = primeiro
+cont = 1
+while cont <= 10:
+    print('{} -> '.format(termo), end='')
+    termo += razao
+    cont += 1
+print('FIM')

@@ -13,7 +13,7 @@ print('{}! = {}'.format(n, nf))
 
 
 # Usando While:
-print('\nUsando o While: ')
+print('\nFatorial Usando o While: ')
 n = int(input('Digite o número: '))
 nf = n
 f = 1
@@ -24,9 +24,21 @@ print('{}! = {}'.format(n, nf))
 
 # Usando o for:
 
-print('\nUsando o For')
-nfor = int(input('Digite um número: '))
-nfor2 = nfor
-for c in range(1, nfor):
-    nfor2 *= c
-print('{}! = {}'.format(nfor, nfor2))
+print('\nFatoria Usando o For')
+nfor = n
+for c in range(1, n):
+    nfor *= c
+print('{}! = {}'.format(n, nfor))
+
+# Exemplo do professor:
+
+print('\nExemplo do Professor: ')
+c = n
+f = 1
+print('Calculando {}! = '.format(n), end='')
+while c > 0:
+    print('{}'.format(c), end='')
+    print(' x ' if c > 1 else ' = ', end='')
+    f *= c
+    c -= 1
+print('{}'.format(f))
