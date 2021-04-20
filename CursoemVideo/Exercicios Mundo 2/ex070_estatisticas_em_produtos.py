@@ -5,9 +5,11 @@
 # What is the total spent. How many products cost more than R$ 1000.
 # Cheapest product name.
 
-s = 0
-over1000 = cheap = c = 0
+s = over1000 = cheap = c = 0
 cheapest = ''
+print('-' * 40)
+print('{:^40}'.format('GUANABARAs Market'))
+print('-' * 40)
 while True:
     product = str(input('What is the product name? '))
     price = float(input('What is the product price? R$ '))
@@ -18,16 +20,14 @@ while True:
 
     c += 1
     s += price
-    if c == 1:
+    if c == 1 or cheap > price:  # Com o or é possível fazer um único if
         cheap = price
         cheapest = product
     if price > 1000:
         over1000 += 1
-    if cheap > price:
-        cheap = price
-        cheapest = product
     if answer == 'N':
         break
+
 print('=' * 50)
 print(f'The total spent is R$ {s}')
 print(f'There are {over1000} products over R$ 1000.00.')
