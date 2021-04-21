@@ -9,14 +9,25 @@
 order = list()
 for v in range(1, 6):
     num = int(input(f'Enter {v}º number: '))
-    # if v == 1:
-    # print('First value added to the list.')
-    order.append(num)
-    for n in order:
-        if num > n:
+    if v == 1:
+        print('First value added to the list.')
+        order.append(num)
+    else:
+        '''
+                if num >= max(order):
+            print('Number added at the end of the list')
             order.append(num)
-        if num < n:
+        elif num <= min(order):
             order.insert(0, num)
+        else: 
+        '''
+        for p, a in enumerate(order):
+            if a > num:
+                print(f'P: {p} e A: {a}')
+
+            else:
+                print(f'Else P: {p} e A: {a}')
+        order.append(num)
     print(order)
 
 print(order)
