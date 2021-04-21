@@ -26,3 +26,20 @@ for c in range(0, 4):
     if num[c] % 2 == 0:
         print(num[c], end=' ')
 print('\n', '-' * 30)
+
+# Teacher Example:
+
+print('\nTeacher Example:')
+
+numero = (int(input('Digite um número: ')), int(input('Digite outro número: ')),
+          int(input('Digite mais um número: ')), int(input('Digite o último número: ')), )
+print(f'Você digitou os números: {numero}')
+print(f'O valor nove apareceu {numero.count(9)} vezes.')
+if 3 in numero:
+    print(f'O valor 3 apareceu na {numero.index(3)+1}ª posição')
+else:
+    print('O valor 3 não aparece em nenhuma posição.')
+print(f'Os valore pares foram: ', end='')
+for n in numero:
+    if n % 2 == 0:
+        print(n, end=' ')
