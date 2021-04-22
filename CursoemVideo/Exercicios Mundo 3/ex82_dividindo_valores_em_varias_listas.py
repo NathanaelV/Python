@@ -16,7 +16,7 @@ while True:
         resp = str(input('Do you want to continue? [Y/N] ')).strip().upper()[0]
     if resp == 'N':
         break
-
+print('='*50)
 print(f'All numbers entered have been: {big}')
 for a in big:
     if a % 2 == 0:
@@ -27,3 +27,26 @@ for a in big:
             impar.append(a)
 print(f'All the even numbers that appear are: {par}')
 print(f'All the odd numbers that appear are: {impar}')
+
+# Teacher example:
+
+print('\nTeacher exaple:')
+num = []
+p = []
+i = []
+
+while True:
+    num.append(int(input('Enter a number: ')))
+    resp = str(input('Do you wanna continue? [S/N]'))
+    if resp in 'Nn':
+        break
+
+for v in num:
+    if v % 2 == 0:
+        p.append(v)
+    else:
+        i.append(v)
+print('-=' * 30)
+print(f'The full list is: {num}')
+print(f'The even list is: {p}')
+print(f'The odd list is: {i}')
