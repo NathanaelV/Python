@@ -8,7 +8,7 @@
 group = list()
 while True:
     print('-' * 30)
-    num = int(input('Enter a numer: '))
+    num = int(input('Enter a number: '))
 
     if num not in group:
         print('Number added to list...')
@@ -23,6 +23,9 @@ while True:
     if resp == 'N':
         break
 
-print('-'*30)
+print('='*30)
 group.sort()
 print(f'All values entered: {group}')
+
+# Teacher example:
+# Teacher's example is similar:

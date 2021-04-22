@@ -7,20 +7,40 @@
 # Mostrar a lista com os valores em ordem
 
 order = list()
-for v in range(1, 9):
+for v in range(1, 6):
     num = int(input(f'Enter {v}º number: '))
     if v == 1:
-        z = 0
-    for pos, a in enumerate(order):
-        print(f'Posição: {pos}, Iten: {a}')
-        if a < num:
-            print('Item < NUM: Z = pos')
-            z = pos
-        else:
-            print('ELSE: Item > NUM: Z = len')
-            z = len(order)
-    print(f'Z: {z}')
-    order.insert(z, num)
-    print(order)
+        print('Number added at the end of the list...')
+        order.append(num)
+    else:
+        for pos, a in enumerate(order):
+            if a > num:
+                print(f'Number added in position {pos}...')
+                order.insert(pos, num)
+                break
+            if num > max(order):
+                print(f'Number added in the end of list...')
+                order.append(num)
+                break
 
-print(order)
+print(f'All number entered in order are: {order}')
+
+# Teacher Example:
+
+print('\nTeacher Example:')
+lista = []
+for c in range(0, 5):
+    n = int(input('Digite um valor: '))
+    if c == 0 or n > lista[-1]:
+        lista.append(num)
+        print('Adicionado ao final da lista...')
+    else:
+        pos = 0
+        while pos < len(lista):
+            if n <= lista[pos]:
+                lista.insert(pos, n)
+                print(f'Adicionado na posição {pos} da lista...')
+                break
+            pos += 1
+print('-=' * 30)
+print(f'O valores digitados em ordem foram {lista}')
