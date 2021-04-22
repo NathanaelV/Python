@@ -8,8 +8,32 @@
 expression = str(input('Enter a expression: '))
 op = expression.count('(')
 cl = expression.count(')')
-print(f'Open: {op}, Closed: {cl}')
-if op == cl:
-    print('The expression is VALID.')
+i = 0
+for a in expression:
+    if a == '(':
+        i += 1
+    if a == ')':
+        i -= 1
+    if i < 0 or op != cl:
+        print('The Expression is INVALID!')
+        break
+if i == 0:
+    print('The Expression is VALID!')
+
+# Teacher example:
+
+print('\nTeacher Example:')
+pilha = []
+for simb in expression:
+    if simb == '(':
+        pilha.append('(')
+    elif simb == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('Expressão está válida.')
 else:
-    print('The expression is INVALID')
+    print('Sua expressão está inválida.')
