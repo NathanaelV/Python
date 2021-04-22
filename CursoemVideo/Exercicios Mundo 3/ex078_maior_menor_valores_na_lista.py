@@ -19,3 +19,32 @@ print(f'\nThe smallest is {min(val)} and appears in the position: ', end='')
 for pmin, vmin in enumerate(val):
     if vmin == min(val):
         print(pmin+1, end='...')
+print()
+
+# Teacher example:
+print('\nTeacher example:')
+listanum = []
+mai = 0
+men = 0
+for c in range(0, 5):
+    listanum.append(int(input(f'Digite um valor para a posição {c}: ')))
+    if c == 0:
+        mai = men = listanum[0]
+    else:
+        if listanum[c] < men:
+            men = listanum[c]
+        if listanum[c] > mai:
+            mai = listanum[c]
+print('-=' * 30)
+print(f'Os valores gitados foram: {listanum}')
+print(f'O maior valor foi {mai} e apareceu nas posições: ', end='')
+
+for p, v in enumerate(listanum):
+    if v == mai:
+        print(f'{p}... ', end='')
+print()
+print(f'O menor valor foi {men} e apareceu nas posições: ', end='')
+for p, v in enumerate(listanum):
+    if v == men:
+        print(f'{p}... ', end='')
+print()

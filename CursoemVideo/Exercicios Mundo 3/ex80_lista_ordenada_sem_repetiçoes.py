@@ -7,27 +7,20 @@
 # Mostrar a lista com os valores em ordem
 
 order = list()
-for v in range(1, 6):
+for v in range(1, 9):
     num = int(input(f'Enter {v}º number: '))
     if v == 1:
-        print('First value added to the list.')
-        order.append(num)
-    else:
-        '''
-                if num >= max(order):
-            print('Number added at the end of the list')
-            order.append(num)
-        elif num <= min(order):
-            order.insert(0, num)
-        else: 
-        '''
-        for p, a in enumerate(order):
-            if a > num:
-                print(f'P: {p} e A: {a}')
-
-            else:
-                print(f'Else P: {p} e A: {a}')
-        order.append(num)
+        z = 0
+    for pos, a in enumerate(order):
+        print(f'Posição: {pos}, Iten: {a}')
+        if a < num:
+            print('Item < NUM: Z = pos')
+            z = pos
+        else:
+            print('ELSE: Item > NUM: Z = len')
+            z = len(order)
+    print(f'Z: {z}')
+    order.insert(z, num)
     print(order)
 
 print(order)
