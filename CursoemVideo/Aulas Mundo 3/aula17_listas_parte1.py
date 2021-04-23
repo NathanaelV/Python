@@ -33,7 +33,9 @@ print(num)
 
 # Excluindo valores
 num.pop()  # Tira o último valor
-num.pop(1)  # Tira o valor da posição 1
+num.pop(1)  # Tira o valor da posição 1, o que aparecer primeiro
+# É possível remover mais vezes o mesmo número se usar um laço
+
 print(f'Apos retirar o valor da última posição e o da primeira: ')
 print(num)
 num.insert(0, 2)
@@ -77,6 +79,12 @@ for c, v in enumerate(val):
 a = [2, 5, 6, 3]
 b = a  # Essa função faz uma ligação entre as 2 listas
 b[2] = 1  # Essa alteração vai acontecer na lista A e B
+
+# Esse comando faz uma copia. C recebe todos os itens de A
 c = a[:]  # Desse jeito eu crio uma copia e não faço ligação
+
 print(f'Lista A: {a}')
 print(f'Lista B: {b}')
+
+novalista = [4, 5, 6, 7, 8]
+print(f'Nova lista: {novalista}')
