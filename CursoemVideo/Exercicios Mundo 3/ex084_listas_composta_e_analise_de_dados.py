@@ -16,7 +16,7 @@ while True:
     person.append(str(input('Enter your name: ')))
     person.append(int(input('Enter your weight: ')))
     group.append(person[:])
-    count += 1
+    count += 1  # I don't need to use that, I can you use len(group) in the end.
     resp = ' '
     if count == 1:
         wmax = wmin = person[1]
@@ -29,12 +29,12 @@ while True:
     person.clear()
 
     while resp not in 'NnYy':
-        resp = str(input('Do you want to continue? [Y/N] ')).strip()
+        resp = str(input('Do you want to continue? [Y/N] ')).strip()[0]
     if resp in 'Nn':
         break
 
 print('=-' * 40)
-print(f'There are {count} people registered:')
+print(f'There are {count} people registered: {len(group)}')  # I don't need that. I could use len(group)
 print(f'The biggest weight is {wmax}. The people who have that weight are: ', end='')
 for p in group:
     if p[1] == wmax:
@@ -43,3 +43,7 @@ print(f'\nThe smallest weight is {wmin}. The people who have that weight are: ',
 for p in group:
     if p[1] == wmin:
         print(p[0], end=', ')
+
+# Teacher Example:
+# Teacher Example is Similar:
+# They don't use a counter, he use a len(group) to know how many people are registration.

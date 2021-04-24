@@ -4,6 +4,7 @@
 # Show each student's grade and average.
 # Show individual student grades that the user wants to know.
 
+'''
 group = list()
 names = list()
 note = list()
@@ -40,10 +41,36 @@ while True:
     print("Do you want to see which student's grades?")
     resp = int(input("Enter a student Nº: (Enter 999 to exit) "))
     if 0 <= resp <= numero:
-        print('-' * 50)
+        # print('-' * 50)
         print(f'Student {group[resp][0]} has grades: {group[resp][1]}')
     elif resp == 999:
         break
     else:
         print('-' * 50)
         print(f'Enter a valid Number: 0 to {numero}')
+'''
+
+ficha = list()
+while True:
+    nome = str(input('Nome: '))
+    n1 = float(input('N1: '))
+    n2 = float(input('N2: '))
+    media = (n1 + n2) / 2
+    ficha.append([nome, [n1, n2], media])
+    resp = str(input('Quer continuar? [S/N]'))
+    if resp in 'Nn':
+        break
+print('-=' * 30)
+print(f'{"Nº":<4}{"Nome":<10}{"Média":>8}')
+print('-' * 35)
+for i, a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
+while True:
+    print('-' * 35)
+    npc = int(input('Mostra notas de qual aluno? (999 para sair): '))
+    if npc == 999:
+        print('FINALISANDO...')
+        break
+    if npc <= len(ficha)-1:
+        print(f'Notas de {ficha[npc][0]} são {ficha[npc][1]}')
+print('<<< VOLTE SEMPRE >>>')

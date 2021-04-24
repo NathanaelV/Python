@@ -5,20 +5,16 @@
 # Show the sum of the third column.
 # Show the highest value in the second row.
 
-inter = list()
-matrix = list()
+matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
 for m in range(0, 3):
-    inter.append(int(input(f'Enter a number for Matrix [{m}][0]: ')))
-    inter.append(int(input(f'Enter a number for Matrix [{m}][1]: ')))
-    inter.append(int(input(f'Enter a number for Matrix [{m}][2]: ')))
-    matrix.append(inter[:])
-    inter.clear()
-
+    for n in range(0, 3):
+        matrix[m][n] = int(input(f'Enter the value [{m}][{n}]: '))
 print('=+=' * 15)
-print(f'[ {matrix[0][0]} ][ {matrix[0][1]} ][ {matrix[0][2]} ]')
-print(f'[ {matrix[1][0]} ][ {matrix[1][1]} ][ {matrix[1][2]} ]')
-print(f'[ {matrix[2][0]} ][ {matrix[2][1]} ][ {matrix[2][2]} ]')
+for m in range(0, 3):
+    for n in range(0, 3):
+        print(f'{matrix[m][n]:^5}', end='')
+    print()
 print('=+=' * 15)
 
 even = 0
@@ -34,3 +30,34 @@ for m in matrix:
 print(f'The sum of all third column is: {column}')
 
 print(f'The highest value in the second row: {max(matrix[1])}')
+
+# Teacher Example:
+
+print('\nTeacher Example:')
+
+matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+spar = scol = mai = 0
+for m in range(0, 3):
+    for n in range(0, 3):
+        matrix[m][n] = int(input(f'Enter the value [{m}][{n}]: '))
+print('=+=' * 15)
+for m in range(0, 3):
+    for n in range(0, 3):
+        print(f'{matrix[m][n]:^5}', end='')
+        if matrix[m][n] % 2 == 0:
+            spar += matrix[m][n]
+    print()
+print('=+=' * 15)
+print(f'A soma de todos os valores pares é {spar}')
+
+for m in range(0, 3):
+    scol += matrix[m][2]
+print(f'A soma dos valores da terceira coluna é {scol}')
+
+for n in range(0, 3):
+    if n == 0:
+        mai = matrix[1][n]
+    else:
+        if mai < matrix[1][n]:
+            mai = matrix[1][n]
+print(f'O maior valor da segunda coluna é {mai}')
