@@ -27,3 +27,6 @@ ranking = sorted(game.items(), key=itemgetter(1), reverse=True)
 for i, v in enumerate(ranking):
     print(f'{i+1}º lugar:  {v[0].capitalize()} tirou {v[1]} nos dados.')
     sleep(0.5)
+
+# Teacher Example:
+# Teacher Example is similar
