@@ -43,6 +43,7 @@ for k, v in person.items():
     print(f'V = {v}; K = {k}')
 
 # Alterando e adicionando elementos:
+
 print('\nChanging the name and adding weight.')
 person['peso'] = 98.5
 person['nome'] = 'Leandro'
@@ -50,6 +51,7 @@ for k, v in person.items():
     print(f'V = {v}; K = {k}')
 
 # Criando um dicionário dentro de uma lista:
+
 Brazil = list()
 estado1 = {'UF': 'Rio Janeiro', 'sigla': 'RJ'}
 estado2 = {'UF': 'São Paulo', 'sigla': 'SP'}
@@ -62,6 +64,7 @@ print(f"Brazil[0]['uf']: {Brazil[0]['UF']}")
 print(f"Brazil[1]['sigla']: {Brazil[1]['sigla']}")
 
 # Introsuzindo Valores:
+
 print('\nIntroduzindo Valores: ')
 brasil = list()
 estado = dict()
