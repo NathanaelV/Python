@@ -15,6 +15,6 @@ print('-' * 30)
 print(f'{"RANKING":^30}')
 print('-' * 30)
 print(game)
-for k, v in game.items():
+
 
 
