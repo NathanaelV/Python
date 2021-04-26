@@ -18,6 +18,6 @@ def tit(msg):
 
 
 tit('Calculando área')
-a = int(input('Largura: (m) '))
-b = int(input('Comprimento: (m) '))
+a = float(input('Largura: (m) '))
+b = float(input('Comprimento: (m) '))
 área(a, b)
