@@ -33,11 +33,46 @@ contar(1, 10, 1)
 div()
 contar(10, 0, 2)
 div()
+
 print("Now it's your turn to customize the count:")
 start = int(input('Start: '))
 end = int(input('End:   '))
 step = int(input('Step:  '))
-
 contar(start, end, step)
-
 print('FIM!')
+
+# Teacher Example:
+
+print('\nTeacher Example:')
+
+def contador(ini, fim, pas):
+    if pas < 0:
+        pas *= -1
+    if pas == 0:
+        pas = 1
+    print('-=' * 20)
+    print(f'Contando de {ini} até {fim} de {pas} em {pas}.')
+
+    if ini < fim:
+        cont = ini
+        while cont <= fim:
+            print(f'{cont} ', end='')
+            cont += pas
+        print('Fim!')
+    else:
+        cont = ini
+        while cont >= fim:
+            print(f'{cont} ', end='')
+            cont -= pas
+        print('Fim!')
+
+
+# Programa Principal
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('-=' * 20)
+print('Agora é a sua vez de personalizar a contagem.')
+i = int(input('Inicio: '))
+f = int(input('Fim:    '))
+p = int(input('Passo:  '))
+contador(i, f, p)

@@ -34,10 +34,12 @@ maior(2, 1)
 maior(6)
 maior()
 
-''''''
 print('-=' * 30)
 value = list()
 p = int(input('How many values do you want to analyze? '))
 for c in range(0, p):
     value.append(int(input('Enter a number: ')))
 maior(value)
+
+# Teacher Example:
+# Teacher example is similar

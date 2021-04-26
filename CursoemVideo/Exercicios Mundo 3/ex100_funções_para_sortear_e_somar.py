@@ -31,3 +31,6 @@ def somapar(lst):
 num = list()
 sorteia(num)
 somapar(num)
+
+# Teacher example:
+# Teacher example is similar

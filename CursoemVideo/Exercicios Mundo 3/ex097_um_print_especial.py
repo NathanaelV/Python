@@ -12,3 +12,6 @@ def escreva(msg):
 escreva('welcome to Jurassic Park')
 escreva('Python')
 escreva('Curso em video teach Python')
+
+# Teacher Example:
+# Teacher example is similar
