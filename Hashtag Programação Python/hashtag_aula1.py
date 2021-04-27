@@ -19,7 +19,7 @@ import time
 
 # Tempo que vai esperar para execultar um comando em segundos
 # Caso seja digitado muito rápido, pode dar problema
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 1
 
 # Exibir um alerta de que o código vai rodar e o usuário vai ter que parar de usar o computador
 pyautogui.alert('''ATENÇÃO!!!
@@ -33,10 +33,12 @@ pyautogui.hotkey('alt', 'tab')
 # Abrir uma aba no Google
 pyautogui.hotkey('ctrl', 't')  # Usado para atalhos
 
+
 # O Que fazer para abrir o navegador:
 #    pyautogui.press('win')
 #    pyautogui.write('google')
 #    pyautogui.press('enter')
+
 
 # Comando para escrever um texto
 # Para links é melhor usar o comando Ctrl + c e Ctrl + v.
@@ -74,7 +76,21 @@ print(pyautogui.position())
 # Importante checar a posição no computador que vai rodar o programa.
 # Se a tela não tiver o mesmo tamanho e nem a mesma formação, pode dar problema
 pyautogui.click(320, 283, clicks=2)
+time.sleep(0.5)
 
-# dfdfs
-print('Fim do código')
+# Para deixar a tela em tela cheia
+# pyautogui.hotkey('winup')
+
+# Fazer o download do arquivo
+pyautogui.click(348, 431)
+pyautogui.click(1157, 192)
+pyautogui.click(950, 596)
+
+# Abrir na pasta e deletar
+time.sleep(2)
+pyautogui.click(208, 698)  # Clicar na seta de download
+time.sleep(1)
+pyautogui.click(293, 637)  # Clicar: Mostra na pasta
+time.sleep(2)
+pyautogui.hotkey('del')
 
