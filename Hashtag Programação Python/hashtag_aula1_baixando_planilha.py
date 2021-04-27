@@ -2,9 +2,12 @@
 
 # Anotar os passos que eu faria. Depois pensar em como passar isso para o Python
 
+# PARTE 1
 # 1º Passo: Entrar no link (Google Drive)
 # 2º Passo: Entrar na pasta Aula 1
 # 3º Passo: Fazer o Download da base de Vendas (Excel)
+
+# PARTE 2
 # 4º Passo: Calcular os idicadores (Faturamento e quantidade de produtos
 # 5º Passo: Entrar no meu email
 # 6º Passo: Criar o email
@@ -21,10 +24,12 @@ import time
 # Caso seja digitado muito rápido, pode dar problema
 pyautogui.PAUSE = 1
 
+
 # Exibir um alerta de que o código vai rodar e o usuário vai ter que parar de usar o computador
 pyautogui.alert('''ATENÇÃO!!!
 Em quanto o código estiver rodando você NÃO poderá usar o Computador.
 Deseja continuar?''')
+
 
 # Mudar para a aba do google:
 pyautogui.hotkey('alt', 'tab')
@@ -52,9 +57,9 @@ link = 'https://drive.google.com/drive/folders/1uAPJrEMKDcGpxa9u48y9SJsRN0SXxO4C
 pyperclip.copy(link)
 
 # Cola o link
-pyautogui.hotkey('ctrl', 'v')
+pyautogui.hotkey('ctrl', 'v')  # Aperta mais de uma tecla
 
-pyautogui.press('enter')  # Para apertar uma tecla
+pyautogui.press('enter')  # Para apertar uma única tecla
 
 pyautogui.write('')  # Para escrever na tela
 
@@ -63,13 +68,13 @@ time.sleep(5)
 
 
 # 2º Passo: Entrar na Pasta Aula 1:
+
 # Para saber a posição do Mous na tela do computador:
 # Fazer o programa esperar um tempo para dar tempo posicionar o mouse onde deseja
 
-'''
-time.sleep(5)
-print(pyautogui.position())
-'''
+
+# time.sleep(5)
+# print(pyautogui.position())
 
 
 # Posições x e Y para o computador clicar.
@@ -79,13 +84,18 @@ pyautogui.click(320, 283, clicks=2)
 time.sleep(0.5)
 
 # Para deixar a tela em tela cheia
-# pyautogui.hotkey('winup')
+# pyautogui.hotkey('winleft') procurar os programas no computador
+
+
+# 3º Passo: Fazer Download da base de vendas
 
 # Fazer o download do arquivo
 pyautogui.click(348, 431)
 pyautogui.click(1157, 192)
 pyautogui.click(950, 596)
 
+
+'''
 # Abrir na pasta e deletar
 time.sleep(2)
 pyautogui.click(208, 698)  # Clicar na seta de download
@@ -93,4 +103,4 @@ time.sleep(1)
 pyautogui.click(293, 637)  # Clicar: Mostra na pasta
 time.sleep(2)
 pyautogui.hotkey('del')
-
+'''
