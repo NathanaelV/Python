@@ -3,11 +3,11 @@
 
 # Class Code 004
 
-a = input('Digite um número:') # int é usado para número inteiro
+a = input('Digite um número:')  # int é usado para número inteiro
 b = input('Digite outro número:')
 c = a + b
-print('A Soma é =', c) # Answer = ab
-print(type(c)) #Para saber qual o tipo primitivo
+print('A Soma é =', c)  # Answer = ab
+print(type(c))  # Para saber qual o tipo primitivo
 
 # Os quatro tipos primitivos mais usados
 # int - Número Inteiros (Positivos, Negativos e 0)
