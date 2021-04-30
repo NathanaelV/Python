@@ -167,7 +167,7 @@ class Passaro:
         # Quando pula vira para cima
         # Quando cai vira para baixo
         if deslocamento < 0 or self.y < (self.altura + 50):  # Comando para manter o Pás virado para cima
-                    # Enquanto estiver acima da posição que saltou, permanecerá para cima
+                    # Enquanto estiver acima da posição que saltou, o Pás permanecerá virado para cima
 
 
 

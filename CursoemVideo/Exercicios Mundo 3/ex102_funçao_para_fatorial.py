@@ -37,9 +37,9 @@ print(f'{"FACTORIAL":^30}')
 print('~' * 30)
 
 fat = int(input('Which number do you want to calculate the factorial of? '))
-mos = input('Do you want to see the count? [S/N] ') #.strip().upper()[0]
+mos = input('Do you want to see the count? [S/N] ')  # .strip().upper()[0]
 
-if mos == 'Ss':
+if mos in 'Ss':
     s = True
 else:
     s = False
@@ -48,3 +48,23 @@ resp = fatorial(fat, s)
 print(f'{resp}')
 
 help(fatorial)
+
+
+# Teacher Example:
+
+
+def fatorial(n, show=False):
+    f = 1
+    for c in range(n, 0, -1):
+        if show:
+            print(c, end='')
+            if c > 1:
+                print(' x ', end='')
+            else:
+                print(' = ', end='')
+        f *= c
+    return f
+
+
+# Principal program:
+print(fatorial(5, show=True))

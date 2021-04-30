@@ -4,7 +4,7 @@
 # Calcular a idade e dizer se essa pessoa tem voto: Negado, Facultativo ou Obrigatório
 # Retornar uma frase: Facultativo entre 16 e 17 e acima de 65 anos
 # Adicionar as docstrings da função
-from datetime import date
+
 
 
 def voto(y):
@@ -13,6 +13,8 @@ def voto(y):
     :param y: Entrada do ano de nascimento.
     :return: Não retorna
     """
+    from datetime import date
+    # Ao importar a função dentro da def, só funciona aqui. Isso economiza espaço
     x = date.today().year - y
     if x < 16:
         print(f'Você tem {x} anos, por isso ainda Você ainda NÃO PODE votar.')
@@ -29,3 +31,6 @@ print(' Descubra se você pode votar'.upper())
 print('~~' * 15)
 nasc = int(input('Qual ano você nasceu? '))
 voto(nasc)
+
+# Teacher Example:
+# Teacher example is similar.
