@@ -18,3 +18,8 @@ def dobrar(num):
 def metade(num):
     n = num / 2
     return n
+
+
+def moeda(num, moeda='R$ '):
+    n = f'{moeda}{num:.2f}'.replace('.', ',')
+    return n
