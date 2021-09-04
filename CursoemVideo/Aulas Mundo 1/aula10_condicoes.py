@@ -2,7 +2,6 @@
 
 # Sabendo se o carro é velho ou não
 
-
 print('\nTEORIA!\n')
 tempo = int(input('Quantos anos tem seu carro?\n'))
 if tempo <= 3:
