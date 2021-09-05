@@ -1,1 +1,3 @@
 Fiz pequenas alterações 
+
+Alterações para o Fetch
